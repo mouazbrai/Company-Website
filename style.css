@@ -1,0 +1,240 @@
+/*
+    * Template Name: Random Templete
+    * Developer: Mouaz Brai
+    * Version: 0.1
+    * Date: 27-02-2024
+    * Description: A flat Templete For Your Company , Scripted By Html Css Js Bootstrap {Responsive - Dynamic}.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*General Style*/
+:root {
+    --main-color: #000;
+    --sec-color: #673AB7;
+}
+
+body {
+    font-family: "Roboto", sans-serif !important;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--sec-color);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: .7;
+}
+
+/*All Style*/
+.btns {
+    border: 1px solid var(--sec-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: fit-content;
+}
+
+.btns:hover {
+    background-color: var(--sec-color);
+    color: #fff;
+}
+
+.title-card {
+    padding: 8px 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.title-card::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--sec-color);
+    transform: skewX(10deg);
+}
+
+/*Navbar Style*/
+.navbar {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 2px 0px;
+    transition: padding .8s;
+}
+
+.nav-logo {
+    position: relative;
+    transition: 1s color;
+}
+
+.nav-logo:hover {
+    color: var(--sec-color);
+}
+
+.nav-logo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    height: 5px;
+    width: 5px;
+    background-color: var(--sec-color);
+}
+
+.nav-link:hover {
+    color: var(--sec-color) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--sec-color);
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: var(--sec-color);
+}
+
+.navbar .navbar-toggler {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 0;
+    border-color: #ccc;
+}
+.navbar .navbar-toggler .down-up {
+    color: var(--sec-color);
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/*Home Style*/
+.home .home-title {
+    color: var(--sec-color);
+}
+
+.home .home-img {
+
+    animation: upDown ease 3s infinite;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*Reviews Style*/
+.reviews .progress {
+    height: auto;
+    background-color: #ccc;
+}
+
+.reviews .progress .progress-bar {
+    padding: 2px;
+    background-color: var(--sec-color);
+}
+
+.reviews .progress .progress-bar.progress-bar-one {
+    width: 92% !important;
+}
+
+.reviews .progress .progress-bar.progress-bar-two {
+    width: 85% !important;
+}
+
+.reviews .progress .progress-bar.progress-bar-three {
+    width: 77% !important;
+}
+
+.reviews .progress .progress-bar.progress-bar-four {
+    width: 83% !important;
+}
+
+/*Partners Style*/
+.partners-img img {
+    width: 150px;
+}
+
+/*Blog Style*/
+.blog .card {
+    transition: border .8s, box-shadow .8s;
+    border-color: transparent !important;
+}
+
+.blog .card:hover {
+    box-shadow: none !important;
+    border-color: #ccc !important;
+}
+
+.blog .card .card-cover {
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    transition: top .8s;
+}
+
+.blog .card:hover .card-cover {
+    top: 0;
+}
+
+/*Contact Style*/
+.contact-content {
+    background-image: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.contact-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000a8;
+    z-index: 0;
+}
+
+.contact-content>div {
+    z-index: 1;
+}
+
+.contact-content p {
+    font-size: .9rem;
+}
+/*Footer Style*/
+.footer .logo-img{
+    width: 150px;
+}
+.footer .form-control{
+    width: 85% !important;
+}
+.footer .copyright{
+    border-top: 1px solid var(--sec-color);
+}
+@media (max-width: 768px) {
+    .home {
+        padding-top: 3rem;
+    }
+}
